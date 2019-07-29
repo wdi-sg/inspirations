@@ -6,37 +6,20 @@ window.onload = function() {
     })
 };
 
-
 // what to do when we recieve the request
 var responseHandler = function() {
     //json parse
     var response = JSON.parse(this.responseText);
     console.log("response text", response.quotes);
-    // console.log("status text", this.statusText);
-    // console.log("status code", this.status);
-
-    //map quotes here...
-    // var allQuotes = response.quotes.map (entry => {
-    //     var li = document.createElement('li');
-    //     li.innerHTML = entry.quote;
-    //     return li.innerHTML;
-    // });
-
-    var eachQuotes = response.quotes.map (entry => {
-        return entry.quote;
-    });
-
-    // console.log(allQuotes);
-      console.log(eachQuotes);
-
-
-// create unorder list
+    console.log("status text", this.statusText);
+    console.log("status code", this.status);
+    // create unorder list
     var list = document.createElement('ul');
     //create a list of item for each quote
     //and append into list
-    eachQuotes.forEach(quotes => {
+    response.quotes.forEach(quotes => {
         var li = document.createElement('li');
-        li.textContent = quotes;
+        li.textContent = quotes.quote;
         list.appendChild(li);
     });
     document.body.appendChild(list);
