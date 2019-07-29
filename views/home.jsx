@@ -12,7 +12,6 @@ class Home extends React.Component {
             <h1>Welcome to Inspirations</h1>
             <h3>Enter Your Quotes</h3>
             <form action="/create" method="POST">
-                <p>name</p>
                     <input type="text" name="quote"/>
                     <input type="submit" value="submit"/>
             </form>
