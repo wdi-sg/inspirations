@@ -13,12 +13,6 @@ button.addEventListener('click', function(event){
 
 });
 
-// var button = document.querySelector('#doPost');
-// button.addEventListener('click', function(event){
-//   var input = document.querySelector('#doPost');
-//   doPostRequest();
-// });
-
 
 var doPostRequest = function(quote){
 
@@ -29,8 +23,15 @@ var doPostRequest = function(quote){
 
   xmlhttp.addEventListener("load", function(){
 
-    console.log("DONE");
-    console.log( this.responseText );
+    // console.log("DONE");
+    // console.log( this.responseText );
+
+    let newUl = document.createElement('ul');
+    let newLi = document.createElement('li');
+    newLi.textContent = quote;
+    newUl.appendChild(newLi);
+    document.body.appendChild(newUl);
+
 
   });
 
@@ -55,9 +56,9 @@ var doPostRequest = function(quote){
 //     console.log("status text", this.statusText);
 //     console.log("status code", this.status);
 
-//     // var newDiv = document.createElement("div");
-//     // newDiv.textContent = dataObj.students[0].name;
-//     // document.body.appendChild(newDiv);
+    // var newDiv = document.createElement("div");
+    // newDiv.textContent = dataObj.students[0].name;
+    // document.body.appendChild(newDiv);
 //   };
 
 //   // make a new request
