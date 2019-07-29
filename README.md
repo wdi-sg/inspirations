@@ -28,11 +28,11 @@ This first basic version of the app doesn't deal with what happens when the user
 Begin with writing the browser side javascript that sends the AJAX request before moving on to *any* of the database functionality (even simply installing the pg library) - this is the same order as we have been following for the server based apps- create the request before creating the thing that deals with the request.
 
 #### further
-This first version simply manipulates the DOM when a quote has successfully been added to the DB. If a new user loads the page they will see a blank page.
+One problem with the basic deliverable described above is that it simply manipulates the DOM when a quote has successfully been added to the DB. If a *new* user loads the page it will be blank, without any quotes.
 
-Create the functionality that any user will see the complete list of quotes when the page loads for them the first time.
+Make some changes to fix this problem, so that a new user will see the complete list of quotes when the page loads for them the first time.
 
-Make an AJAX request for the current list of all quotes and render that in the DOM.
+When the page loads, make an AJAX request for the current list of all quotes and render that in the DOM.
 
 #### further
 Add user login. Users can create their own quotes. Show the user for each quote in the list.
