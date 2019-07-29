@@ -33,16 +33,22 @@ module.exports = (db) => {
 
     let getAllQuotesCC = (req, res) => {
         console.log("entering controller");
-        res.render('home');
-        db.quote.test((err, result) => {
-            if (err){
-                console.log(err.stack);
-            } else {
-                console.log(result);
-            }
+        db.quote.getAllQuotes((err, result) => {
+            console.log("RESULT IN CC: ", result);
+            let data = {
+                quotesData: result
+            };
+            res.render('home', data);
         });
     };
 
+    let createQuoteCC = (req, res) => {
+        console.log("entering createQuoteCC");
+        console.log("REQ.BODY: ", req.body)
+        db.quote.createQuote(req.body, (err, result) => {
+            console.log("RESULT IN CC: ", result);
+        });
+    };
 
 
     /**
@@ -52,7 +58,8 @@ module.exports = (db) => {
      */
     return {
         // register: registerControllerCallback
-        getAllQuotes: getAllQuotesCC
+        getAllQuotes: getAllQuotesCC,
+        createQuote: createQuoteCC
     };
 
 };

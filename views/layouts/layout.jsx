@@ -1,5 +1,4 @@
 var React = require('react');
-console.log('entering layout')
 class Layout extends React.Component {
     render() {
         return (

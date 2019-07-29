@@ -16,5 +16,6 @@ module.exports = (app, allModels) => {
 
   app.get('/', quoteCC.getAllQuotes);
 
+  app.post('/quote', quoteCC.createQuote);
 
 };
