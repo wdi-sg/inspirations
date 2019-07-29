@@ -1,0 +1,9 @@
+CREATE TABLE IF NOT EXISTS quotes (
+    id SERIAL PRIMARY KEY,
+    quote TEXT
+);
+
+CREATE TABLE IF NOT EXISTS another (
+    id SERIAL PRIMARY KEY,
+    quote TEXT
+);
