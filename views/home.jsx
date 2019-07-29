@@ -15,6 +15,11 @@ class Home extends React.Component {
                     <button type="submit" id="submitBtn">Submit</button>
                   </form>
 
+                  <h2> List of inspirational Quotes </h2>
+                  <ul id='list'></ul>
+
+
+
                 <script src='/script.js'/>
                 </body>
               </html>

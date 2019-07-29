@@ -26,11 +26,9 @@ var doPostRequest = function(quote){
     // console.log("DONE");
     // console.log( this.responseText );
 
-    let newUl = document.createElement('ul');
     let newLi = document.createElement('li');
     newLi.textContent = quote;
-    newUl.appendChild(newLi);
-    document.body.appendChild(newUl);
+    document.querySelector('#list').appendChild(newLi);
 
 
   });
