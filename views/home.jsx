@@ -9,12 +9,11 @@ class Home extends React.Component {
                 <body>
                   <h1>Hello From Hilmi's Computer</h1>
 
-                  <form action="/quotes" method="POST">
+                  <form>
                     <p> Please type in your inspirational quote below </p>
-                    <input type="text" id="quote" />
+                    <input type="text" name="quotes" id="quote" />
                     <button type="submit" id="submitBtn">Submit</button>
                   </form>
-
 
                 <script src='/script.js'/>
                 </body>
