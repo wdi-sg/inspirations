@@ -1,6 +1,6 @@
 console.log("we are in the browser");
 
-var button = document.getElementById("submit");
+var button = document.getElementById("submitbtn");
 
 button.addEventListener('click', function(event){
     var input = document.querySelector('#inputquote').value;
@@ -8,23 +8,23 @@ button.addEventListener('click', function(event){
     newquote(input);
 });
 
+var request = new XMLHttpRequest();
+
 let newquote = function(input){
     console.log("in newquote func" + input);
 
     // make a new request
-    var request = new XMLHttpRequest();
+
 
     // listen for the request response
     request.addEventListener("load", responseHandler);
-
-
 };
 
 // what to do when we receive the request
 var responseHandler = function() {
 
     let output = document.getElementById('output');
-    output.innerHTML += "<li>"+JSON.parse(this.responseText).id+"</li>";
+    output.innerHTML += "<li>" + JSON.parse(this.responseText).id + "</li>";
 
     console.log("response text", this.responseText);
     console.log("status text", this.statusText);

@@ -21,22 +21,22 @@ class Home extends React.Component {
 
     return (
         <html>
-        <body>
-            <h1>Welcome!</h1>
-            <p>Hello world!</p>
+            <body>
+                <h1>Welcome!</h1>
+                <p>Hello world!</p>
 
-            {/*<form method="POST" action="/quotes">*/}
-                <p>Insert Quote: <input id="inputquote" type="text" name="quote"/></p>
-                <p>--</p>
-                <button id="submitbtn" type="submit" value="Submit">Submit</button>
-            {/*</form>*/}
-            <div id="output">
-                <ul id="quotelist">
-                    {itemElements}
-                </ul>
-            </div>
-            <script src="/script.js"></script>
-        </body>
+                {/*<form method="POST" action="/quotes">*/}
+                    <p>Insert Quote: <input id="inputquote" type="text" name="quote"/></p>
+                    <p>--</p>
+                    <button id="submitbtn" type="submit" value="Submit">Submit</button>
+                {/*</form>*/}
+                <div id="output">
+                    <ul id="quotelist">
+                        {itemElements}
+                    </ul>
+                </div>
+                <script src="script.js" type="text/javascript"></script>
+            </body>
         </html>
 
     );
