@@ -1,0 +1,14 @@
+INSERT INTO quotes (quote) VALUES('Luminous beings are we!');
+INSERT INTO quotes (quote) VALUES('Do or do not!');
+INSERT INTO quotes (quote) VALUES('Try not!');
+INSERT INTO quotes (quote) VALUES('I <3 the jedi temple.');
+INSERT INTO quotes (quote) VALUES('Where is my porridge?');
+INSERT INTO quotes (quote) VALUES('My light saber is green');
+INSERT INTO quotes (quote) VALUES('I want more bulbs!!!');
+INSERT INTO quotes (quote) VALUES('Who said I eat onions?');
+INSERT INTO quotes (quote) VALUES('Judge me by my size');
+INSERT INTO quotes (quote) VALUES('Strong Jedi was he');
+INSERT INTO quotes (quote) VALUES('Anger leads to the dark');
+INSERT INTO quotes (quote) VALUES('Always an apprentice');
+INSERT INTO quotes (quote) VALUES('Find the planet!');
+INSERT INTO quotes (quote) VALUES('800 years have I train');
