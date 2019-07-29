@@ -1,0 +1,4 @@
+CREATE TABLE IF NOT EXISTS quoteTable (
+    id SERIAL PRIMARY KEY,
+    quote TEXT
+);
