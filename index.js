@@ -59,7 +59,7 @@ app.engine('jsx', reactEngine);
 
 
 
-app.post('/quotes', (request, response) => {
+app.post('/', (request, response) => {
 
     console.log(request.body.quote);
 

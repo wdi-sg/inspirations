@@ -25,7 +25,7 @@ class Home extends React.Component {
                 <h1>Welcome!</h1>
                 <p>Hello world!</p>
 
-                {/*<form method="POST" action="/quotes">*/}
+                {/*<form method="POST" action="/">*/}
                     <p>Insert Quote: <input id="inputquote" type="text" name="quote"/></p>
                     <p>--</p>
                     <button id="submitbtn" type="submit" value="Submit">Submit</button>
