@@ -35,7 +35,6 @@ var SALT = 'bonk';
 
 class Home extends React.Component {
   render() {
-    console.log(this.props)
     let quotesList = this.props.quotesData;
     console.log("IN HOME: ", quotesList);
     return (
@@ -55,7 +54,6 @@ class Home extends React.Component {
                                     </form>
                                 </div>
                                 <QuotesList quotesList={quotesList}></QuotesList>
-
                             </div>
                         </div>
                     </div>
