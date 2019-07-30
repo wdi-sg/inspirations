@@ -44,7 +44,7 @@ module.exports = (db) => {
 
     let createQuoteCC = (req, res) => {
         console.log("entering createQuoteCC");
-        console.log("REQ.BODY: ", req.body)
+        console.log("REQ.BODY: ", req.body);
         db.quote.createQuote(req.body, (err, result) => {
             console.log("RESULT IN CC: ", result);
         });

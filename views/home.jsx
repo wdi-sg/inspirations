@@ -48,10 +48,8 @@ class Home extends React.Component {
                                 <div className="card-header text-white bg-primary">Make a quote!!
                                 </div>
                                 <div className="card-body bg-light px-2 py-2">
-                                    <form className="form create-quote" method="POST" action="/quote">
-                                        <input type="text" className="card-input form-control" name="content" placeholder="Type here"/>
-                                        <button className="btn btn-primary" type="submit" id="create-quote-btn">Quote</button>
-                                    </form>
+                                    <input type="text" className="card-input form-control" id="create-quote-input" name="content" placeholder="Type here"/>
+                                    <button className="btn btn-primary" type="submit">Quote</button>
                                 </div>
                                 <QuotesList quotesList={quotesList}></QuotesList>
                             </div>
@@ -66,3 +64,7 @@ class Home extends React.Component {
 }
 
 module.exports = Home;
+// <form className="form create-quote" method="POST" action="/quote">
+//                                         <input type="text" className="card-input form-control" name="content" placeholder="Type here"/>
+//                                         <button className="btn btn-primary" type="submit" id="create-quote-btn">Quote</button>
+//                                     </form>
