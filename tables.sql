@@ -1,0 +1,7 @@
+CREATE TABLE IF NOT EXISTS quotes (
+
+	id SERIAL PRIMARY KEY,
+	content TEXT,
+	user_id INTEGER
+
+);
