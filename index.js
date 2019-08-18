@@ -43,23 +43,23 @@ app.get('/', (request, response) => {
 
 app.get('/quotes',(request, response)=>{
 
-  let query = "select * from quotes";
+    let query = "select * from quotes";
 
     pool.query(query, (err, result) => {
 
         if (err) {
-        console.error('query error:', err.stack);
-        response.send( 'query error' );
+            console.error('query error:', err.stack);
+            response.send( 'query error' );
         } else {
-        console.log('query result:', result.rows);
+            console.log('query result:', result.rows);
 
             const data = {
                 quotesList : result.rows
-            };
+        };
         console.log(data);
 
         response.render('home', data);
-        // response.send('OKKKKK works');
+        //response.send('OKKKKK works');
         }
     });
 });
@@ -67,20 +67,22 @@ app.get('/quotes',(request, response)=>{
 
 app.post('/quotes', (request, response) => {
 
-  console.log(request.body);
-  let query = "INSERT INTO quotes (quote) VALUES ($1)";
-  const values = (request.body);
+    console.log('new quote submitted')
+    console.log(request.body);
 
-  pool.query(query, values, (queryError, result)=>{
+    let query = "INSERT INTO quotes (quote) VALUES ($1)";
+    const values = [request.body.quote];
 
-    if( queryError ){
-      response.send("query error");
-    }else{
-      console.log( result.rows );
+    pool.query(query, values, (queryError, result)=>{
 
-      response.redirect("/quotes");
-    }
-  });
+        if( queryError ){
+            response.send("query error");
+        } else{
+            console.log( result.rows );
+
+            response.redirect("/quotes");
+        }
+    });
 });
 
 

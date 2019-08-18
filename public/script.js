@@ -1,32 +1,39 @@
-console.log("testing");
+console.log("script works");
 
+var post = document.querySelector('#post-button');
 
-var button = document.querySelector('#submit');
+post.addEventListener('click', function(event){
+    alert('Submitted');
+    doRequest(input);
 
-button.addEventListener('click', function(event){
-  alert('Submitted');
-  var input = document.querySelector('#quote');
-  var studentId = input.value;
-
-  doRequest( studentId );
+    var input = document.querySelector('#quote-text').value;
+    doRequest(input);
+    document.querySelector('#quote').value = "";
+    // let x = document.querySelector("ul");
+    // let y = document.createElement("li");
+    // console.log(input);
+    // y.innerText = input;
+    // x.appendChild(y);
+    // input="";
 });
 
 var doRequest = function(){
+    let data = {
+        'quote' : value
+    }
+    var responseHandler = function() {
+        console.log("response text", this.responseText);
+        console.log("status text", this.statusText);
+        console.log("status code", this.status);
+    };
 
-  var responseHandler = function() {
-    console.log("response text", this.responseText);
-    console.log("status text", this.statusText);
-    console.log("status code", this.status);
-  };
+    var request = new XMLHttpRequest();
+    request.addEventListener("load", responseHandler);
+    request.open("Post", "/quotes");
+    // send the request
+    request.setRequestHeader("Content-Type", "application/json;charset=UTF-8");
 
-  var request = new XMLHttpRequest();
 
-  request.addEventListener("load", responseHandler);
-
-  request.open("GET", "http://localhost:3000/quotes");
-
-  // send the request
-  request.send();
-
+    request.send(JSON.stringify(data));
 
 };
